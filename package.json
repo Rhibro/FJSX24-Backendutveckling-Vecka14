@@ -1,0 +1,15 @@
+{
+  "name": "fjsx24-backendutveckling-vecka14",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Rhi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
