@@ -1,0 +1,17 @@
+{
+  "name": "wednesday",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "text",
+    "start": "node server.js"
+  },
+  "author": "rhi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  }
+}

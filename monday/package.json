@@ -1,5 +1,6 @@
 {
   "name": "fjsx24-backendutveckling-vecka14",
+  "type": "module",
   "version": "1.0.0",
   "description": "practice",
   "main": "server.js",

@@ -14,8 +14,8 @@
 // });
 
 //-------------------------------------------
-// Express server:
 
+// // Express server:
 const express = require('express');
 const app = express();
 const dateModule = require('./dateModule');
@@ -70,3 +70,56 @@ app.get('/contact', (req, res) => {
 app.listen(8000, () => {
     console.log('Hej, Server is running on http://localhost:8000');
 })
+
+// fake API server 
+// const express = require('express');
+// const fs = require('fs');
+// const path = require('path');
+// const logMessage = require('./logging');
+
+// const app = express();
+// const PORT = 8000;
+// const dataFilePath = path.join(__dirname, 'data.json');
+
+// app.get('/api/data', (req, res) => {
+//     fs.readFile(dataFilePath, 'utf8', (err, data) => {
+//         if (err) {
+//             logMessage('Error reading data file');
+//             return res.status(500).json({ error: 'internal server error'});
+//         }
+//         logMessage('Server API data');
+//         res.json(JSON.parse(data));
+//     });
+// });
+
+// app.listen(PORT, () => {
+//     logMessage(`Server started on port ${PORT}`);
+//     console.log(`Server is running at http://localhost:${PORT}`);
+// });
+
+
+// sample data for data.json
+// {
+//   "users": [
+//     {
+//       "name": "Rhi",
+//       "age": 31
+//     },
+//     {
+//       "name": "Rhi",
+//       "age": 31
+//     },
+//     {
+//       "name": "Rhi",
+//       "age": 31
+//     },
+//     {
+//       "name": "Rhi",
+//       "age": 31
+//     },
+//     {
+//       "name": "Rhi",
+//       "age": 31
+//     }
+//   ]
+// }
