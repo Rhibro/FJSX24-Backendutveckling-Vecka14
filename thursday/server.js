@@ -108,6 +108,23 @@ app.put("/api/courses/:id", (req, res) => {
     res.json(courses); // return updated courses list
 });
 
+app.get("/api/status", (req, res) => {
+    res.json({status: "OK"});
+})
+
+app.get("/api/hello", (req, res) => {
+    const name = req.query.name;
+
+    if (!name) {
+        return res.status(400).json({error: "Name is required"});
+    }
+
+    res.json({message: `Hej, ${name}!`});
+})
+
+app.get("/api/echo", (req, res) => {
+    res.json(req.headers);
+})
 
 app.listen(PORT, () => {
 console.log(`server is running on http://localhost:${PORT}`);
