@@ -1,0 +1,4 @@
+25Y-04-10 10:29:52 [INFO]: GET /error
+25Y-04-10 10:29:52 [ERROR]: Error!!!: Simulate Error
+2025-04-10 10:34:00 [INFO]: GET /error
+2025-04-10 10:34:00 [ERROR]: Error!!!: Simulate Error

@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 // GET to retrieve all users
 app.get("/api/users", (req, res) => {
-  res.status(200).jsonp(users);
+  res.status(200).json(users);
 });
 
 // GET to retrieve a specific user (with params)
@@ -131,6 +131,60 @@ app.patch("/api/users/:id", (req, res) => {
     res.status(200).json({message: "User updated", user});
 });
 
+// 7 & 8
+const products = [
+  { id: 1, name: 'Penna', price: 10 },
+  { id: 2, name: 'Blyertspenna', price: 500 },
+  { id: 3, name: 'Rice', price: 25 },
+  { id: 4, name: 'Potatoes', price: 5 },
+  { id: 5, name: 'Oranges', price: 1200 },
+  { id: 6, name: 'Apples', price: 80 }
+];
+
+// if you type http://localhost:8000/api/products?sort=name the list of products will change based on name or price
+app.get("/api/products", (req, res) => {
+  const { sort } = req.query;
+
+  console.log("Sort by:", sort);
+
+  let sortedProducts = [...products]; // clones the array so the original doesn't get modified
+
+  if (sort === 'name') {
+    sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sort === 'price') {
+    sortedProducts.sort((a, b) => a.price - b.price);
+  }
+  
+  res.status(200).json(sortedProducts);
+})
+
+app.get("/api/products/:id", (req, res) => {
+  const product = products.find((p) => p.id === parseInt(req.params.id));
+
+  if (!product) return res.status(404).json({ error: "Product not found" });
+
+  res.status(200).json(product);
+})
+
+// 9. add a new product to the product list
+app.post("/api/products", (req, res) => {
+  const { name, price } = req.body;
+
+  if (!name || price === undefined) 
+    return res.status(400).json({ error: "name is required" });
+
+  const newProduct = { 
+    id: Date.now(), // quick was to generate a somewhat unique ID
+    name,
+    price
+  };
+
+  // push to the correct array
+  products.push(newProduct);
+
+  // 201 = created
+  res.status(201).json(newProduct); 
+});
 
 // start and listen to server
 app.listen(PORT, () => {
