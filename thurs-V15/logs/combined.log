@@ -2,3 +2,11 @@
 25Y-04-10 10:29:52 [ERROR]: Error!!!: Simulate Error
 2025-04-10 10:34:00 [INFO]: GET /error
 2025-04-10 10:34:00 [ERROR]: Error!!!: Simulate Error
+2025-04-11 08:42:20 [INFO]: GET /favicon.ico
+2025-04-11 08:49:46 [INFO]: GET /api/headers
+2025-04-11 09:00:15 [INFO]: GET /api/headers
+2025-04-11 09:00:31 [ERROR]: Error!!!: headers is not defined
+2025-04-11 09:00:48 [INFO]: GET /api/headers
+2025-04-11 09:02:04 [INFO]: GET /api/headers
+2025-04-11 09:04:02 [INFO]: GET /api/headers
+2025-04-11 09:04:24 [INFO]: GET /api/headers

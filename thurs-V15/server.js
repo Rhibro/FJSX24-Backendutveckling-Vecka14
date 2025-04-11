@@ -12,6 +12,19 @@ app.get("/", (req, res) => {
     res.send("hello!");
 })
 
+//Lätta Övningar:
+//1: /api/welcome – Returnera en hälsning med res.header():
+app.get("/api/welcome", (req, res) => {
+    res.header("Hello from the server!");
+    res.send("Hello from api!");
+});
+
+//2: /api/headers – Returnera alla inkommande headers.
+app.get("/api/header", (req, res) => {
+    console.log(req.headers);
+    res.json(req.headers)
+})
+
 app.use(morgan("dev"));
 
 app.use(logRequests);
