@@ -44,7 +44,7 @@ router.post("/", (req, res) => {
 });
 
 // update a product
-router.put("/", (req, res) => {
+router.put("/:id", (req, res) => {
     const productId = parseInt(req.params.id);
     const index = products.findIndex(p => p.id === productId);
 
@@ -62,6 +62,14 @@ router.put("/", (req, res) => {
 
 // delete a product
 router.delete("/:id", (req,res) => {
+    // const deleteProduct = parseInt(req.params.id);
+    // const index = products.findIndex(p => p.id === deleteProduct);
+
+    // if (index === -1) {
+    //     return res.status(400).json({message: "Product could not be deleted"});
+    // };
+
+    // products[index] = {splice(productId)}
     res.json({
         message: `Product ${req.params.id} deleted`
     });

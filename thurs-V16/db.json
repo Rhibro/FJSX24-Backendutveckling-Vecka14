@@ -1,0 +1,29 @@
+{
+  "books": [
+    {
+      "id": "12345678",
+      "title": "Lolita",
+      "author": "Vladimir Nabokov"
+    },
+    {
+      "id": "12345677",
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë"
+    },
+    {
+      "id": "12345667",
+      "title": "The Iliad",
+      "author": "Homer"
+    },
+    {
+      "id": "12345567",
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury"
+    },
+    {
+      "id": "12344567",
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë"
+    }
+  ]
+}
